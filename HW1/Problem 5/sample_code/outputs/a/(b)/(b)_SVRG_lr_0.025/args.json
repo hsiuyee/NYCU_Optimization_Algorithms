@@ -1,0 +1,1 @@
+{"optimizer": "SVRG", "nn_model": "MNIST_nn_one_layer", "dataset": "MNIST", "n_iter": 30, "lr": 0.025, "batch_size": 64, "store_stats_interval": 10}
