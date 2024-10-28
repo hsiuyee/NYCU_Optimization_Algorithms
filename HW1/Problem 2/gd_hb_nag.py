@@ -167,27 +167,27 @@ def plot2(name, sub_optimality_gap, optimal_gap, theoretical_gap):
 if __name__ == "__main__":
 
     # # GD
-    # x_0 = 3
-    # epochs = 50
-    # # eta = 1/50
-    # eta = 2 / (2 + 50)
-    # GD_optimizer = GD(x_0, epochs, eta)
-    # GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap = GD_optimizer.optimize()
-    # plot2('GD', GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap)
+    x_0 = 3
+    epochs = 50
+    # eta = 1/50
+    eta = 2 / (2 + 50)
+    GD_optimizer = GD(x_0, epochs, eta)
+    GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap = GD_optimizer.optimize()
+    plot2('GD', GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap)
 
     # HB
     # L = 50
     # u = 2
-    L = 1
-    u = 1
-    x_0 = 3
-    epochs = 50
-    # eta = 1/18
-    eta = 4 / ((math.sqrt(L) + math.sqrt(u)) ** 2)
-    # theta = 4/9
-    theta = max(abs(1 - math.sqrt(eta * L)), abs(1 - math.sqrt(eta * u))) ** 2
-    HB_optimizer = HB(x_0, epochs, eta, theta)
-    HB_sub_optimality_gap, HB_optimal_gap, HB_theoretical_gap = HB_optimizer.optimize()
+    # L = 1
+    # u = 1
+    # x_0 = 3
+    # epochs = 50
+    # # eta = 1/18
+    # eta = 4 / ((math.sqrt(L) + math.sqrt(u)) ** 2)
+    # # theta = 4/9
+    # theta = max(abs(1 - math.sqrt(eta * L)), abs(1 - math.sqrt(eta * u))) ** 2
+    # HB_optimizer = HB(x_0, epochs, eta, theta)
+    # HB_sub_optimality_gap, HB_optimal_gap, HB_theoretical_gap = HB_optimizer.optimize()
 
     # # NAG
     # x_0 = 3
@@ -198,6 +198,6 @@ if __name__ == "__main__":
     # NAG_sub_optimality_gap, NAG_optimal_gap, NAG_theoretical_gap = NAG_optimizer.optimize()
 
     # plot(GD_sub_optimality_gap, GD_optimal_gap, HB_sub_optimality_gap, HB_optimal_gap, NAG_sub_optimality_gap, NAG_optimal_gap)
-    # plot2('GD', GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap)
-    plot2('HB', HB_sub_optimality_gap, HB_optimal_gap, HB_theoretical_gap)
+    plot2('GD', GD_sub_optimality_gap, GD_optimal_gap, GD_theoretical_gap)
+    # plot2('HB', HB_sub_optimality_gap, HB_optimal_gap, HB_theoretical_gap)
     # plot2('NAG', NAG_sub_optimality_gap, NAG_optimal_gap, NAG_theoretical_gap)
