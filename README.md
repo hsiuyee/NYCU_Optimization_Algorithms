@@ -1,1 +1,1 @@
-# NYCU_Optimization _Algorithms
+# Optimization _Algorithms
